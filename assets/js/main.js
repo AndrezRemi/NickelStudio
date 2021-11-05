@@ -3,6 +3,10 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+const ScrollToOffset = (div, offset) =>{
+    const y = div.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({top: y, behavior: 'smooth'});
+}
 
 (function($) {
 
